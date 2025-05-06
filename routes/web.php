@@ -1,7 +1,9 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\TaskController;
+use App\Models\Task;
+use Illuminate\Http\Request;
 
 
 /*
@@ -18,3 +20,4 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render('Home');
 });
+Route::resource('tasks', TaskController::class);
